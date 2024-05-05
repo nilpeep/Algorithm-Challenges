@@ -8,6 +8,15 @@ const matrix = [
 
 function adjacentMatrix(matrix){
 
+    if (Array.isArray(arr)) {
+        let dimensions = 1;
+        let innerArray = arr;
+        while (Array.isArray(innerArray[0])) {
+            dimensions++;
+            innerArray = innerArray[0];
+        }
+    } 
+
 
     let dimensionCount = 2;
     
