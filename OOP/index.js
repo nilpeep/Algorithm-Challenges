@@ -6,14 +6,19 @@ const matrix = [
     [5,8]
 ]
 
-let dimensionCount = 3;
+function adjacentMatrix(matrix){
 
-let dimensionalArray = new Array(dimensionCount);
 
-for (let i = 0; i < 3; i++) {
-    dimensionalArray[i] = new Array(3);
+    let dimensionCount = 2;
+    
+    let dimensionalArray = new Array(dimensionCount);
+    
+    for (let i = 0; i < dimensionCount; i++) {
+        dimensionalArray[i] = new Array(dimensionCount);
+    }
+    
+    // Diziyi ekrana yazdırma
+    console.log(dimensionalArray);
 }
 
-// Diziyi ekrana yazdırma
-console.log(dimensionalArray);
 
