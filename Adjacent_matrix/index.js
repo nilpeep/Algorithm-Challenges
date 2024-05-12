@@ -1,4 +1,4 @@
-// // MATRIX:
+// MATRIX:
 
 const matrix = [
   [9, 4],
@@ -48,36 +48,4 @@ const getSiblings = (arr) => {
 
 console.log(getSiblings(matrix));
 
-// class siblings extends Object{
-//     constructor(arr){
-//         this.arr = arr;
-//         this.resultArray = [ ]
-//         for(let i = 0; i<this.count; i++){
-//             let row = []
 
-//             for(let j = 0; j<this.count;j++){
-//                 row.push(0)
-
-//             }
-
-//             this.resultArray.push(row)
-//         }
-//         let x = 0
-//     }
-
-//     getCell (x,y){
-//         return this.arr[x][y]
-//     }
-
-//     get count(){
-//         let result = 0
-//         this.arr.map((i) => result += i.length)
-//         return result
-//     }
-
-//     getIndexCell(index){
-
-//     }
-// }
-
-// new siblings(matrix)
