@@ -1,29 +1,31 @@
 // // MATRIX:
 
 const matrix = [
-    [9,4],
-    [6,3],
-    [5,8]
-]
+  [9, 4],
+  [6, 3],
+  [5, 8],
+];
+
+const getSiblings = (arr) => {
+  const result = [];
+  arr.map((item, i) => {
+    arr[i].map((item, j) => {
+      const siblings = [];
+      if (arr[i + 1] && arr[i + 1][j]) siblings.push(arr[i + 1][j]);
+      if (arr[i - 1] && arr[i - 1][j]) siblings.push(arr[i - 1][j]);
+      if (arr[i][j + 1]) siblings.push(arr[i][j + 1]);
+      if (arr[i][j - 1]) siblings.push(arr[i][j - 1]);
+
+      result.push(siblings)
+    });
+  });
+
+  return result;
+};
 
 
 
-const getSiblings = (arr) =>{
-    
-    arr.map((item,i)=>{
-        arr[i].map((item,j) =>{
-            const siblings = []
-            console.log(arr[i][j])
-            console.log(i,j)
-            arr[i+1][j] && siblings.push(arr[i+1][j])
-            arr[i-1][j] && siblings.push(arr[i-1][j])
-            arr[i][j+1] && siblings.push(arr[i][j+1])
-            arr[i,j-1] && siblings.push(arr[i][j-1])
-        })
-    } )
-}
-
-getSiblings(matrix)
+console.log(getSiblings(matrix))
 
 // class siblings extends Object{
 //     constructor(arr){
@@ -58,4 +60,3 @@ getSiblings(matrix)
 // }
 
 // new siblings(matrix)
-
