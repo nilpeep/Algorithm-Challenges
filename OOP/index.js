@@ -8,8 +8,10 @@ const matrix = [
 
 const getSiblings = (arr) => {
   const result = [];
+  const gridMatrix = []
   arr.map((item, i) => {
     arr[i].map((item, j) => {
+      gridMatrix.push(item)
       const siblings = [];
       if (arr[i + 1] && arr[i + 1][j]) siblings.push(arr[i + 1][j]);
       if (arr[i - 1] && arr[i - 1][j]) siblings.push(arr[i - 1][j]);
@@ -20,7 +22,11 @@ const getSiblings = (arr) => {
     });
   });
 
-  return result;
+  const grid = []
+
+
+
+  return result,gridMatrix;
 };
 
 
